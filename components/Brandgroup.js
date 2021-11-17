@@ -2,11 +2,13 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
 import CardItem from './CardItem'
+import TextFont from './TextFont'
+
 
 const Brandgroup = (props) => {
     return (
         <View style={styles.brandGroup}>
-            <Text style={styles.title}>{props.title}</Text>
+            <TextFont style={styles.title}>{props.title}</TextFont>
             <FlatList
                 keyExtractor={(item) => item._id}
                 horizontal

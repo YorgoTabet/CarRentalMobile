@@ -11,7 +11,7 @@ const CardItem = (props) => {
                     colors={['transparent', 'rgba(38, 37, 37, 0.8)']}
                     style={{ height: '30%', justifyContent: 'flex-end' }}
                     locations={[0, 0.8]}>
-                    <Text style={styles.item}>
+                    <Text style={styles.item} >
                         {props.title}
                     </Text>
                 </LinearGradient>
@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
         marginHorizontal: 5,
         justifyContent: 'flex-end',
         overflow: 'hidden',
-
     },
     image: {
         width: '100%',
@@ -41,6 +40,7 @@ const styles = StyleSheet.create({
     },
     item: {
         color: 'white',
-        margin: 5
+        margin: 5,
+        fontFamily: 'Montserrat_400Regular'
     }
 })

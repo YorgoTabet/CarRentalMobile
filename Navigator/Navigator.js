@@ -17,13 +17,14 @@ const Navigator = () => {
             <Stack.Navigator
                 initialRouteName={'Home'}
                 screenOptions={{
-                    headerTitle: (props) => <Header />,
                     headerStyle: {
                         backgroundColor: Colors.primary
                     }
                 }}
             >
-                <Stack.Screen name="Home" component={Home} />
+                <Stack.Screen options={{
+                    headerTitle: (props) => <Header />,
+                }} name="Home" component={Home} />
                 <Stack.Screen name="Details" component={Details} />
             </Stack.Navigator>
         </NavigationContainer >

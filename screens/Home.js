@@ -2,6 +2,7 @@ import React, { cloneElement, useEffect, useState } from 'react'
 import { ActivityIndicator, Image, StyleSheet, Text, View } from 'react-native'
 import { FlatList, ScrollView } from 'react-native-gesture-handler'
 import Brandgroup from '../components/Brandgroup'
+import TextFont from '../components/TextFont'
 import Colors from '../Utils/Colors'
 
 const Home = (props) => {
@@ -20,7 +21,6 @@ const Home = (props) => {
         setDifferentBrands(tempArray)
     }
     const viewCarHandler = (id) => {
-        console.log(id);
         props.navigation.navigate('Details', { car: cars.filter(car => car._id === id) })
     }
 
@@ -38,8 +38,6 @@ const Home = (props) => {
                 setCars(data)
                 setIsLoading(false)
             }).catch(error => {
-                console.log(error);
-                setIsLoading(false)
                 setIsError(error)
             })
     }, [])
