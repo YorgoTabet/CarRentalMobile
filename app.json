@@ -4,11 +4,11 @@
     "slug": "01-practice-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./assets/logo.png",
+      "resizeMode": "center",
+      "backgroundColor": "#22313f"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

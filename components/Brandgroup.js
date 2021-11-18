@@ -10,6 +10,7 @@ const Brandgroup = (props) => {
         <View style={styles.brandGroup}>
             <TextFont style={styles.title}>{props.title}</TextFont>
             <FlatList
+                contentContainerStyle={{ width: '100%' }}
                 keyExtractor={(item) => item._id}
                 horizontal
                 data={props.data}

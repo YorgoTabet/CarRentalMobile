@@ -7,6 +7,8 @@ import Colors from '../Utils/Colors'
 import { LinearGradient } from 'expo-linear-gradient'
 import History from '../components/History'
 
+
+
 const Details = (props) => {
 
     useEffect(() => {
