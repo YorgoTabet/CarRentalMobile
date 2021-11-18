@@ -1,5 +1,5 @@
 import React, { cloneElement, useEffect, useState } from 'react'
-import { ActivityIndicator, Image, StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, Dimensions, Image, StyleSheet, Text, View } from 'react-native'
 import { FlatList, ScrollView } from 'react-native-gesture-handler'
 import Brandgroup from '../components/Brandgroup'
 import TextFont from '../components/TextFont'
@@ -85,7 +85,7 @@ const Home = (props) => {
                 colors={[Colors.secondary, Colors.primary]}
                 end={{ x: 0.9, y: 0.9 }}
                 start={{ x: 0.2, y: 0.2 }}
-                style={{ height: '100%' }}
+                style={{ height: '100%', width: '100%' }}
                 locations={[0.5, 0.51]}>
                 <Filter
                     options={differentBrands.sort()}
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
-        backgroundColor: Colors.secondary
+        backgroundColor: Colors.secondary,
     },
     carousel: {
         flexDirection: 'row',
