@@ -4,12 +4,15 @@ import { FlatList, ScrollView } from 'react-native-gesture-handler'
 import Brandgroup from '../components/Brandgroup'
 import TextFont from '../components/TextFont'
 import Colors from '../Utils/Colors'
+import { useSelector } from 'react-redux'
 
 const Home = (props) => {
     const [cars, setCars] = useState([])
     const [differentBrands, setDifferentBrands] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     const [isError, setIsError] = useState(null)
+
+    const showRentals = useSelector(state => state.showRentals)
 
     const getDifferentBrands = (data) => {
         let tempArray = []
@@ -69,6 +72,7 @@ const Home = (props) => {
                     (itemData) => {
                         return (
                             <Brandgroup
+                                showRentals={showRentals}
                                 itemClicked={viewCarHandler}
                                 title={itemData.item}
                                 data={cars.filter(car => car.brand.name === itemData.item)} />

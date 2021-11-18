@@ -24,7 +24,12 @@ const History = (props) => {
                     <TextFont style={{ fontWeight: 'bold' }}>Days</TextFont>
                 </View>
                 {currentData.map(x => {
-                    return <View key={x.username + x.days} style={styles.header}><TextFont>{x.username}</TextFont><TextFont>{x.days}</TextFont></View>
+                    return (
+                        <View key={x.username + x.days} style={styles.header}>
+                            <TextFont>{x.username}</TextFont>
+                            <TextFont>{x.days}</TextFont>
+                        </View>
+                    )
                 })}
             </View>
 

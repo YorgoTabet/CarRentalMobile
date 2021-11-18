@@ -17,9 +17,11 @@ const Brandgroup = (props) => {
                     (itemData) => {
                         return (
                             <CardItem
+                                showRentals={props.showRentals}
                                 onClick={props.itemClicked}
                                 title={itemData.item.title}
                                 image={itemData.item.image}
+                                numberOfRentals={itemData.item.numberOfRentals}
                                 id={itemData.item._id} />
                         )
                     }
